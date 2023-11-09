@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_background"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SecondActivity">
+
+    <ScrollView
+        android:id="@+id/inkedList"
+        android:layout_width="705dp"
+        android:layout_height="162dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp">
+
+        <TextView
+            android:id="@+id/listTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scrollbars="vertical"
+            android:text="Linked List:"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inkedList"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="Введите элемент"
+        android:textColor="#000000"
+        android:inputType="textNoSuggestions"
+        android:digits="0123456789,-"
+        android:textColorHint="#000000" />
+
+    <Button
+        android:id="@+id/addElementButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Добавить элемент" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inkedList"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/sortDescendingButton"
+        android:layout_toEndOf="@+id/deleteEditText"
+        android:onClick="resetList"
+        android:text="Назад" />
+
+    <EditText
+        android:id="@+id/deleteEditText"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/inkedList"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/inputEditText"
+        android:hint="Индекс для удаления"
+        android:textColor="#000000"
+        android:inputType="textNoSuggestions"
+        android:digits="0123456789"
+        android:textColorHint="#000000" />
+
+
+    <Button
+        android:id="@+id/sortAscendingButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sortDescendingButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Сортировка по возрастанию" />
+
+    <Button
+        android:id="@+id/sortDescendingButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inkedList"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Сортировка по убыванию" />
+
+    <Button
+        android:id="@+id/deleteElementButton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deleteEditText"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/addElementButton"
+        android:text="Удалить элемент" />
+</RelativeLayout>
